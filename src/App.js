@@ -8,6 +8,7 @@ import RootLayout from './layout/rootLayout';
 import Faq from './Pages/help/faq';
 import Contact from './Pages/help/contact';
 import HelpLayout from './layout/helpLayout';
+import NotFound from './Pages/notFound';
 
 
 // import { BrowserRouter , Routes, Route, Link, NavLink } from 'react-router-dom'
@@ -22,6 +23,8 @@ const router = createBrowserRouter(
                   <Route path='faq' element={<Faq />} />
                   <Route path='contact' element={<Contact />} />
               </Route>
+
+              <Route path='*' element={<NotFound />} />
           </Route>
         )
 )
