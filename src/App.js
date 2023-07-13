@@ -10,7 +10,9 @@ import Contact from './Pages/help/contact';
 import HelpLayout from './layout/helpLayout';
 import NotFound from './Pages/notFound';
 import CareerLayout from './layout/careerLayout';
-import Career , {CareerLoader} from './Pages/career';
+import Career , {CareerLoader} from './Pages/career/career';
+import CareerDetails from './Pages/career/careerDetails';
+import { CareerDetailsLoader } from './Pages/career/careerDetails';
 
 // import { BrowserRouter , Routes, Route, Link, NavLink } from 'react-router-dom'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider  } from 'react-router-dom';
@@ -27,7 +29,9 @@ const router = createBrowserRouter(
 
               <Route path='careers' element={<CareerLayout />}>
                   <Route index element = {<Career />} loader = {CareerLoader}/>
+                  <Route path=':id' element={<CareerDetails />} loader={CareerDetailsLoader} />
               </Route>
+
 
               <Route path='*' element={<NotFound />} />
           </Route>
