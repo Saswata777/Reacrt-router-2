@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useLoaderData } from "react-router-dom"
 
 const Career = () => {
-  const careers = useLoaderData()
+    const careers = useLoaderData()
 
   return (
     <div className='careers'>
