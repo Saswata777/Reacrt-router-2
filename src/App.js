@@ -6,7 +6,7 @@ import About from './Pages/about';
 
 import RootLayout from './layout/rootLayout';
 import Faq from './Pages/help/faq';
-import Contact from './Pages/help/contact';
+import Contact, { contactAction } from './Pages/help/contact';
 import HelpLayout from './layout/helpLayout';
 import NotFound from './Pages/notFound';
 import CareerLayout from './layout/careerLayout';
@@ -25,7 +25,7 @@ const router = createBrowserRouter(
               <Route path='about' element={<About />} />
               <Route path='help' element={<HelpLayout />}>
                   <Route path='faq' element={<Faq />} />
-                  <Route path='contact' element={<Contact />} />
+                  <Route path='contact' element={<Contact />} action={contactAction} />
               </Route>
 
               <Route path='careers' element={<CareerLayout />} errorElement={<CareerErrorDetails />}>
